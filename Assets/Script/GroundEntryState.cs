@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundEntryState : MeleeBaseState
@@ -12,6 +14,7 @@ public class GroundEntryState : MeleeBaseState
         animator.SetTrigger("Attack" + attackIndex);
         Debug.Log("Player Attack " + attackIndex + " Fired!");
     }
+
     public override void OnUpdate()
     {
         base.OnUpdate();

@@ -1,3 +1,5 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundFinisherState : MeleeBaseState
@@ -8,10 +10,11 @@ public class GroundFinisherState : MeleeBaseState
 
         //Attack
         attackIndex = 3;
-        duration = 0.75f;
+        duration = 0.5f;
         animator.SetTrigger("Attack" + attackIndex);
         Debug.Log("Player Attack " + attackIndex + " Fired!");
     }
+
     public override void OnUpdate()
     {
         base.OnUpdate();

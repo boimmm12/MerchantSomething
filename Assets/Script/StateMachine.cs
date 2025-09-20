@@ -2,16 +2,19 @@ using UnityEngine;
 
 public class StateMachine : MonoBehaviour
 {
-    public State CurrentState { get; private set; }
+    public string customName;
+
     private State mainStateType;
+
+    public State CurrentState { get; private set; }
     private State nextState;
 
+    // Update is called once per frame
     void Update()
     {
         if (nextState != null)
         {
             SetState(nextState);
-            nextState = null;
         }
 
         if (CurrentState != null)
@@ -20,6 +23,7 @@ public class StateMachine : MonoBehaviour
 
     private void SetState(State _newState)
     {
+        nextState = null;
         if (CurrentState != null)
         {
             CurrentState.OnExit();
@@ -35,6 +39,7 @@ public class StateMachine : MonoBehaviour
             nextState = _newState;
         }
     }
+
     private void LateUpdate()
     {
         if (CurrentState != null)
@@ -46,12 +51,27 @@ public class StateMachine : MonoBehaviour
         if (CurrentState != null)
             CurrentState.OnFixedUpdate();
     }
+
     public void SetNextStateToMain()
     {
         nextState = mainStateType;
     }
+
     private void Awake()
     {
         SetNextStateToMain();
+
+    }
+
+
+    private void OnValidate()
+    {
+        if (mainStateType == null)
+        {
+            if (customName == "Combat")
+            {
+                mainStateType = new IdleCombatState();
+            }
+        }
     }
 }
