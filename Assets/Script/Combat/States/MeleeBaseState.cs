@@ -1,70 +1,74 @@
 using System.Collections.Generic;
 using UnityEngine;
+using GDEUtils.StateMachine;
 
-public class MeleeBaseState : State
+public abstract class MeleeBaseMB : State<CombatManager>
 {
-    public float duration;
+    [Header("Attack Common")]
+    public float duration = 0.5f;
     public int damage = 10;
-    protected Animator animator;
-    protected bool shouldCombo;
+
     protected int attackIndex;
-
+    protected bool shouldCombo;
+    protected Animator anim;
     protected Collider2D hitCollider;
+
+    // Timers & buffer
+    protected float time;
+    protected float attackPressedTimer = 0f;
+    protected bool comboQueuedThisState = false;
     private readonly List<Collider2D> collidersDamaged = new List<Collider2D>();
-    // private GameObject HitEffectPrefab;
 
-    private float attackPressedTimer = 0f;
-    private bool comboQueuedThisState = false;
-    // private float stateEnterTime = 0f;
+    // static buffer helper (buat dipanggil dari UI button)
+    private static float staticPressedTimer = 0f;
 
-    public override void OnEnter(StateMachine _stateMachine)
+    public static void BufferAttackInputStatic()
     {
-        base.OnEnter(_stateMachine);
+        staticPressedTimer = 0.25f;
+    }
 
-        animator = GetComponent<Animator>();
-        hitCollider = GetComponent<ComboCharacter>().hitbox;
-        //HitEffectPrefab = GetComponent<ComboCharacter>().Hiteffect;
-
+    public override void Enter(CombatManager owner)
+    {
+        base.Enter(owner);
+        anim = owner.animator;
+        hitCollider = owner.hitbox;
         shouldCombo = false;
         comboQueuedThisState = false;
         attackPressedTimer = 0f;
+        time = 0f;
         collidersDamaged.Clear();
-        // stateEnterTime = Time.time;
     }
 
-    public override void OnUpdate()
+    public override void Execute()
     {
-        base.OnUpdate();
+        time += Time.deltaTime;
 
+        // merge static buffer (jika dipicu dari UI)
+        if (staticPressedTimer > 0f)
+        {
+            attackPressedTimer = Mathf.Max(attackPressedTimer, staticPressedTimer);
+            staticPressedTimer = 0f;
+        }
+
+        // Buffer input mouse
         if (attackPressedTimer > 0f)
             attackPressedTimer = Mathf.Max(0f, attackPressedTimer - Time.deltaTime);
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            attackPressedTimer = 0.25f;
-        }
+        // if (owner.InputEnabled && owner.CombatEnabled && Input.GetMouseButtonDown(0))
+        //     attackPressedTimer = 0.25f;
 
-        if (animator.GetFloat("Weapon.Active") > 0f)
-        {
+        // Apply damage saat Weapon.Active
+        if (anim.GetFloat("Weapon.Active") > 0f)
             Attack();
-        }
 
-        bool windowOpen = animator.GetFloat("AttackWindow.Open") > 0f;
-
-        // Gunakan buffer sekali saja di state ini
+        // Combo window
+        bool windowOpen = anim.GetFloat("AttackWindow.Open") > 0f;
         if (windowOpen && attackPressedTimer > 0f && !comboQueuedThisState)
         {
-            // if (Time.time >= stateEnterTime + 0.05f)
-
             shouldCombo = true;
             comboQueuedThisState = true;
             attackPressedTimer = 0f;
         }
-    }
-
-    public override void OnExit()
-    {
-        base.OnExit();
     }
 
     protected void Attack()

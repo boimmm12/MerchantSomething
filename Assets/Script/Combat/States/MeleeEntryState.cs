@@ -1,14 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using GDEUtils.StateMachine;
 
-public class MeleeEntryState : State
+public class MeleeEntryMB : State<CombatManager>
 {
-    public override void OnEnter(StateMachine _stateMachine)
+    public override void Enter(CombatManager owner)
     {
-        base.OnEnter(_stateMachine);
-
-        State nextState = (State)new GroundEntryState();
-        stateMachine.SetNextState(nextState);
+        base.Enter(owner);
+        // langsung lempar ke GroundEntry (attack 1)
+        owner.SM.ChangeState(owner.GroundEntry);
     }
 }

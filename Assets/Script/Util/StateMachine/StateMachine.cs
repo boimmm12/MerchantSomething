@@ -1,77 +1,66 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class StateMachine : MonoBehaviour
+namespace GDEUtils.StateMachine
 {
-    public string customName;
-
-    private State mainStateType;
-
-    public State CurrentState { get; private set; }
-    private State nextState;
-
-    // Update is called once per frame
-    void Update()
+    public class StateMachine<T>
     {
-        if (nextState != null)
+        public State<T> CurrentState { get; private set; }
+        public Stack<State<T>> StateStack { get; private set; }
+
+        T owner;
+
+        public StateMachine(T owner)
         {
-            SetState(nextState);
+            this.owner = owner;
+            StateStack = new Stack<State<T>>();
         }
 
-        if (CurrentState != null)
-            CurrentState.OnUpdate();
-    }
-
-    private void SetState(State _newState)
-    {
-        nextState = null;
-        if (CurrentState != null)
+        public void Execute()
         {
-            CurrentState.OnExit();
+            CurrentState?.Execute();
         }
-        CurrentState = _newState;
-        CurrentState.OnEnter(this);
-    }
 
-    public void SetNextState(State _newState)
-    {
-        if (_newState != null)
+        public void Push(State<T> newState)
         {
-            nextState = _newState;
+            StateStack.Push(newState);
+            CurrentState = newState;
+            CurrentState.Enter(owner);
         }
-    }
 
-    private void LateUpdate()
-    {
-        if (CurrentState != null)
-            CurrentState.OnLateUpdate();
-    }
-
-    private void FixedUpdate()
-    {
-        if (CurrentState != null)
-            CurrentState.OnFixedUpdate();
-    }
-
-    public void SetNextStateToMain()
-    {
-        nextState = mainStateType;
-    }
-
-    private void Awake()
-    {
-        SetNextStateToMain();
-
-    }
-
-
-    private void OnValidate()
-    {
-        if (mainStateType == null)
+        public void Pop()
         {
-            if (customName == "Combat")
+            StateStack.Pop();
+            CurrentState.Exit();
+            CurrentState = StateStack.Peek();
+        }
+
+        public void ChangeState(State<T> newState)
+        {
+            if (CurrentState != null)
             {
-                mainStateType = new IdleCombatState();
+                StateStack.Pop();
+                CurrentState.Exit();
             }
+
+            StateStack.Push(newState);
+            CurrentState = newState;
+            CurrentState.Enter(owner);
+        }
+
+        public IEnumerator PushAndWait(State<T> newState)
+        {
+            var oldState = CurrentState;
+            Push(newState);
+            yield return new WaitUntil(() => CurrentState == oldState);
+        }
+
+        public State<T> GetPrevState()
+        {
+            return StateStack.ElementAt(1);
         }
     }
 }

@@ -1,8 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+using GDEUtils.StateMachine;
 
-public class IdleCombatState : State
+public class IdleCombatMB : State<CombatManager>
 {
-
+    public override void Enter(CombatManager owner)
+    {
+        base.Enter(owner);
+    }
 }

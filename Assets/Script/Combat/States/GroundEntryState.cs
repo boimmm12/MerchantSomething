@@ -1,34 +1,26 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using GDEUtils.StateMachine;
 
-public class GroundEntryState : MeleeBaseState
+public class GroundEntryMB : MeleeBaseMB
 {
-    public override void OnEnter(StateMachine _stateMachine)
+    public override void Enter(CombatManager owner)
     {
-        base.OnEnter(_stateMachine);
-
-        //Attack
+        base.Enter(owner);
         attackIndex = 1;
         duration = 0.5f;
-        animator.SetTrigger("Attack" + attackIndex);
+        anim.SetTrigger("Attack" + attackIndex);
         Debug.Log("Player Attack " + attackIndex + " Fired!");
     }
 
-    public override void OnUpdate()
+    public override void Execute()
     {
-        base.OnUpdate();
-
-        if (fixedtime >= duration)
+        base.Execute();
+        if (time >= duration)
         {
             if (shouldCombo)
-            {
-                stateMachine.SetNextState(new GroundComboState());
-            }
+                owner.SM.ChangeState(owner.GroundCombo);
             else
-            {
-                stateMachine.SetNextStateToMain();
-            }
+                owner.SM.ChangeState(owner.IdleCombat);
         }
     }
 }

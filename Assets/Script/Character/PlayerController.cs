@@ -23,9 +23,8 @@ public class PlayerController : MonoBehaviour
     private float dashCooldown;
     private bool isDashing = false;
     private bool canInput = true;
-
-    // kelas ini adalah hasil generate dari .inputactions kamu
     private InputSystem_Actions input;
+    public static PlayerController i { get; private set; }
 
     private void Awake()
     {
