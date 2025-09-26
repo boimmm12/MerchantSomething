@@ -294,6 +294,7 @@ GameObject:
   - component: {fileID: 112975095}
   - component: {fileID: 112975096}
   - component: {fileID: 112975097}
+  - component: {fileID: 112975098}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -528,6 +529,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _teamIndex: 1
+--- !u!114 &112975098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112975088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac5ef579bd6313429b5001db39bd053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  active: []
 --- !u!1 &156548986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1254,7 @@ SpriteRenderer:
   m_SortingLayerID: -3932441
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2863241958341551144, guid: 59ab756e1a3421749a9dc32522a2ae7c, type: 3}
+  m_Sprite: {fileID: 189789712469494844, guid: a3c9671e670ad604799f89f42686c7c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1391,22 +1405,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93eacb1caedb60b489b994cd8b6b02f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 112975090}
-  playerTag: Player
   moveSpeed: 2.5
   stopDistance: 1.4
-  detectRange: 6
+  attackRadius: 1.4
   hitbox: {fileID: 846426199}
   damage: 10
   attackWindup: 0.15
-  attackActiveTime: 0.2
+  attackActive: 0.2
   attackRecover: 0.35
   attackCooldown: 0.6
-  hitEffect: {fileID: 0}
-  animator: {fileID: 1030535716}
-  animIdle: idle
-  animWalk: walkLeft
-  animAttack: attackleft
 --- !u!95 &1030535716
 Animator:
   serializedVersion: 7
@@ -1417,7 +1424,7 @@ Animator:
   m_GameObject: {fileID: 1030535705}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 981d51df7b7bcda4092d51fdf97060cb, type: 2}
+  m_Controller: {fileID: 9100000, guid: 351ee4b8205c8854d93f7256c394699c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

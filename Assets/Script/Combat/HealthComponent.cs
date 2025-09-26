@@ -36,8 +36,6 @@ public class HealthComponent : MonoBehaviour
         Debug.Log($"{gameObject.name} Died");
         if (anim != null)
             anim.SetTrigger("Die");
-
-        // sementara: disable enemy
         gameObject.SetActive(false);
     }
 }

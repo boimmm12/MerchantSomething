@@ -3,187 +3,138 @@ using UnityEngine;
 
 public enum EnemyState { Idle, Walking, Attack }
 
-[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyBase : MonoBehaviour
 {
-    [Header("Target")]
-    [SerializeField] protected Transform player;      // drag Player
-    [SerializeField] protected string playerTag = "Player";
-
-    [Header("Movement")]
-    [SerializeField] protected float moveSpeed = 2.5f;
-    [SerializeField] protected float stopDistance = 1.4f;     // jarak berhenti sebelum attack
-    [SerializeField] protected float detectRange = 6f;        // jarak deteksi awal
+    [SerializeField] float moveSpeed;
+    [SerializeField] float stopDistance;
 
     [Header("Attack")]
-    [SerializeField] protected Collider2D hitbox;             // collider serangan (Trigger)
-    [SerializeField] protected int damage = 10;
-    [SerializeField] protected float attackWindup = 0.15f;    // jeda sebelum hit aktif
-    [SerializeField] protected float attackActiveTime = 0.20f;// durasi hit aktif
-    [SerializeField] protected float attackRecover = 0.35f;   // jeda setelah hit
-    [SerializeField] protected float attackCooldown = 0.60f;  // CD antar serangan
-    [SerializeField] protected GameObject hitEffect;
+    [SerializeField] float attackRadius;
+    [SerializeField] Collider2D hitbox;
+    [SerializeField] int damage;
+    [SerializeField] float attackWindup;
+    [SerializeField] float attackActive;
+    [SerializeField] float attackRecover;
+    [SerializeField] float attackCooldown;
 
-    [Header("Animation (opsional)")]
-    [SerializeField] protected Animator animator;
-    [SerializeField] protected string animIdle = "Idle";
-    [SerializeField] protected string animWalk = "Walk";
-    [SerializeField] protected string animAttack = "Attack";
+    float atkTimer;
+    float cdTimer;
+    bool hitWindow;
+    readonly List<Collider2D> damaged = new();
 
-    // runtime
-    protected EnemyState state = EnemyState.Idle;
-    protected Rigidbody2D rb;
-    protected float timer;             // timer internal (windup/active/recover)
-    protected float cooldownTimer;     // attack cooldown
-    protected bool attackHitWindow;    // apakah sedang fase hit aktif
-    protected readonly List<Collider2D> damaged = new();
+    Animator anim;
+    EnemyState state;
+    Transform player;
+    Rigidbody2D rb;
+    private Vector2 lastDir = Vector2.down;
 
-    // ====== UNITY ======
-    protected virtual void Awake()
+    void Awake()
     {
+        var p = GameObject.FindGameObjectWithTag("Player");
+        if (p) player = p.transform;
+
+        anim = GetComponent<Animator>();
+        if (!anim) anim = GetComponentInChildren<Animator>();
+
         rb = GetComponent<Rigidbody2D>();
-        if (!player && !string.IsNullOrEmpty(playerTag))
-        {
-            var go = GameObject.FindGameObjectWithTag(playerTag);
-            if (go) player = go.transform;
-        }
-        if (!animator) animator = GetComponentInChildren<Animator>();
+        state = EnemyState.Idle;
+
         if (hitbox) hitbox.isTrigger = true;
-        SetState(EnemyState.Idle);
     }
 
-    protected virtual void Update()
-    {
-        float dt = Time.deltaTime;
-        cooldownTimer -= dt;
-
-        switch (state)
-        {
-            case EnemyState.Idle:
-                TickIdle(dt);
-                break;
-            case EnemyState.Walking:
-                TickWalking(dt);
-                break;
-            case EnemyState.Attack:
-                TickAttack(dt);
-                break;
-        }
-    }
-
-    protected virtual void SetState(EnemyState next)
-    {
-        OnExitState(state);
-        state = next;
-        OnEnterState(state);
-    }
-
-    protected virtual void OnEnterState(EnemyState s)
-    {
-        timer = 0f;
-        attackHitWindow = false;
-        damaged.Clear();
-
-        if (animator)
-        {
-            switch (s)
-            {
-                case EnemyState.Idle: animator.Play(animIdle, 0, 0f); break;
-                case EnemyState.Walking: animator.Play(animWalk, 0, 0f); break;
-                case EnemyState.Attack: animator.Play(animAttack, 0, 0f); break;
-            }
-        }
-    }
-
-    protected virtual void OnExitState(EnemyState s)
-    {
-        attackHitWindow = false;
-        damaged.Clear();
-    }
-
-    protected virtual void TickIdle(float dt)
+    void Update()
     {
         if (!player) return;
 
-        float d = DistToPlayer();
-        if (d <= detectRange)
+        cdTimer -= Time.deltaTime;
+
+        Vector2 toTarget = player.position - transform.position;
+        float dist = toTarget.magnitude;
+
+        if (dist <= attackRadius && cdTimer <= 0f)
         {
-            SetState(EnemyState.Walking);
+            Attack(toTarget);
+        }
+        else if (dist > stopDistance)
+        {
+            Walk(toTarget);
+        }
+        else
+        {
+            anim.SetFloat("MoveX", lastDir.x);
+            anim.SetFloat("MoveY", lastDir.y);
+            anim.SetFloat("Speed", 0f);
+
+            if (state == EnemyState.Attack && atkTimer <= 0f) state = EnemyState.Idle;
+        }
+
+        if (state == EnemyState.Attack)
+            TickAttack();
+    }
+
+    void Walk(Vector2 toTarget)
+    {
+        state = EnemyState.Walking;
+
+        Vector2 dir = toTarget.normalized;
+        rb.MovePosition(rb.position + dir * moveSpeed * Time.deltaTime);
+
+        lastDir = dir;
+        anim.SetFloat("MoveX", dir.x);
+        anim.SetFloat("MoveY", dir.y);
+        anim.SetFloat("Speed", moveSpeed);
+
+        state = EnemyState.Idle;
+    }
+
+    void Attack(Vector2 toTarget)
+    {
+        if (state != EnemyState.Attack)
+        {
+            state = EnemyState.Attack;
+
+            Vector2 dir = toTarget.sqrMagnitude > 0.0001f ? toTarget.normalized : lastDir;
+            lastDir = dir;
+            anim.SetFloat("MoveX", lastDir.x);
+            anim.SetFloat("MoveY", lastDir.y);
+            anim.SetFloat("Speed", 0f);
+
+            anim.ResetTrigger("Attack");
+            anim.SetTrigger("Attack");
+
+            atkTimer = attackWindup + attackActive + attackRecover;
+            hitWindow = false;
+            damaged.Clear();
         }
     }
 
-    protected virtual void TickWalking(float dt)
+    void TickAttack()
     {
-        if (!player) { SetState(EnemyState.Idle); return; }
+        float dt = Time.deltaTime;
+        float elapsed = attackWindup + attackActive + attackRecover - atkTimer;
+        atkTimer -= dt;
 
-        float d = DistToPlayer();
+        if (!hitWindow && elapsed >= attackWindup)
+            hitWindow = true;
 
-        if (d > stopDistance)
-        {
-            Vector2 dir = (player.position - transform.position).normalized;
-            rb.MovePosition(rb.position + dir * moveSpeed * dt);
-            FaceTo(player.position);
-        }
-
-        if (d <= stopDistance && cooldownTimer <= 0f)
-        {
-            BeginAttack();
-        }
-
-        // kehilangan target
-        if (d > detectRange * 1.5f)
-        {
-            SetState(EnemyState.Idle);
-        }
-    }
-
-    protected virtual void TickAttack(float dt)
-    {
-        timer += dt;
-
-        // fase WINDUP
-        if (!attackHitWindow && timer >= attackWindup)
-        {
-            attackHitWindow = true;
-            // mulai HIT AKTIF
-        }
-
-        // fase ACTIVE: cek tabrakan
-        if (attackHitWindow)
+        if (hitWindow)
         {
             DoAttackHit();
-            // selesai active?
-            if (timer >= attackWindup + attackActiveTime)
-            {
-                attackHitWindow = false; // masuk recover
-            }
+            if (elapsed >= attackWindup + attackActive)
+                hitWindow = false;
         }
 
-        // selesai RECOVER?
-        if (timer >= attackWindup + attackActiveTime + attackRecover)
+        if (atkTimer <= 0f)
         {
-            cooldownTimer = attackCooldown;
-            // kembali ke walking jika player masih dekat, else idle
-            float d = player ? DistToPlayer() : Mathf.Infinity;
-            SetState(d <= detectRange ? EnemyState.Walking : EnemyState.Idle);
+            state = EnemyState.Idle;
+            cdTimer = attackCooldown;
         }
     }
 
-    protected virtual void BeginAttack()
-    {
-        timer = 0f;
-        attackHitWindow = false;
-        damaged.Clear();
-        FaceTo(player ? player.position : transform.position);
-        SetState(EnemyState.Attack);
-    }
-
-    // ====== ATTACK HIT ======
-    protected virtual void DoAttackHit()
+    void DoAttackHit()
     {
         if (!hitbox) return;
 
-        // overlap semua collider di dalam hitbox trigger
         var results = new Collider2D[12];
         var filter = new ContactFilter2D { useTriggers = true };
         int count = Physics2D.OverlapCollider(hitbox, filter, results);
@@ -193,48 +144,21 @@ public class EnemyBase : MonoBehaviour
             var col = results[i];
             if (!col || damaged.Contains(col)) continue;
 
-            // cari komponen Health di target (Player)
             var health = col.GetComponentInChildren<HealthComponent>();
             var team = col.GetComponentInChildren<TeamComponent>();
-            if (health && team && team.teamIndex == TeamIndex.Player) // asumsi TeamIndex.Player tersedia di projectmu
+            if (health && team && team.teamIndex == TeamIndex.Player)
             {
                 health.TakeDamage(damage);
                 damaged.Add(col);
-
-                if (hitEffect)
-                    Instantiate(hitEffect, col.bounds.center, Quaternion.identity);
             }
         }
+
     }
-
-    // ====== HELPERS ======
-    protected float DistToPlayer()
+    void OnDrawGizmosSelected()
     {
-        return player ? Vector2.Distance(transform.position, player.position) : Mathf.Infinity;
-    }
-
-    protected void FaceTo(Vector3 worldTarget)
-    {
-        Vector3 dir = worldTarget - transform.position;
-        if (dir.x > 0.01f) transform.localScale = new Vector3(1, transform.localScale.y, transform.localScale.z);
-        else if (dir.x < -0.01f) transform.localScale = new Vector3(-1, transform.localScale.y, transform.localScale.z);
-    }
-
-    // ====== PUBLIC API (bisa dipanggil dari luar) ======
-    public virtual void SetPlayer(Transform t) => player = t;
-    public EnemyState CurrentState => state;
-
-    // Expose untuk override di turunan
-    public virtual void SetStats(float move, float stop, float detect, int dmg,
-                                 float windup, float active, float recover, float cd)
-    {
-        moveSpeed = move;
-        stopDistance = stop;
-        detectRange = detect;
-        damage = dmg;
-        attackWindup = windup;
-        attackActiveTime = active;
-        attackRecover = recover;
-        attackCooldown = cd;
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, stopDistance);
     }
 }
