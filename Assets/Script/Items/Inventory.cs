@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public enum ItemCategory { a, b, c }
@@ -9,6 +11,7 @@ public class Inventory : MonoBehaviour
     [SerializeField] List<ItemSlot> c;
 
     List<List<ItemSlot>> allSlots;
+    public event Action OnUpdated;
 
     private void Awake()
     {
@@ -18,6 +21,26 @@ public class Inventory : MonoBehaviour
     {
         "A", "B", "C"
     };
+    public static Inventory GetInventory()
+    {
+        if (PlayerController.i == null)
+        {
+            Debug.LogError("[Inventory] PlayerController.i belum tersedia!");
+            return null;
+        }
+
+        return PlayerController.i.GetComponent<Inventory>();
+    }
+    public List<ItemSlot> GetSlotsByCategories(int categoryIndex)
+    {
+        return allSlots[categoryIndex];
+    }
+    ItemCategory GetCatagoryFromItem(ItemBase item)
+    {
+        if (item is RecoveryItem)
+            return ItemCategory.a;
+        return ItemCategory.b;
+    }
 }
 [System.Serializable]
 public class ItemSlot

@@ -16,7 +16,7 @@ public class ItemBase : ScriptableObject
     public int Price => price;
     public bool IsSellable => isSellable;
 
-    public virtual bool Use()
+    public virtual bool Use(PlayerController player)
     {
         return false;
     }

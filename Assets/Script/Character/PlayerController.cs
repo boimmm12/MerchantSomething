@@ -14,11 +14,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactDistance = 0.6f;
     [SerializeField] private float interactRadius = 0.3f;
 
+    [SerializeField] InventoryUI inventoryUI;
+
     private Rigidbody2D body;
     private Animator anim;
 
     private Vector2 moveInput;
     private Vector2 lastDir = Vector2.down;
+    private Vector2 desiredVelocity;
 
     private float dashCooldown;
     private bool isDashing = false;
@@ -28,16 +31,21 @@ public class PlayerController : MonoBehaviour
 
     private void Awake()
     {
+        i = this;
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         input = new InputSystem_Actions();
+
+        body.bodyType = RigidbodyType2D.Dynamic;
+        body.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        body.interpolation = RigidbodyInterpolation2D.Interpolate;
+        body.freezeRotation = true;
     }
 
     private void OnEnable()
     {
         input.Enable();
 
-        // DAFTAR EVENT — pakai method, jangan lambda inline
         input.Player.Move.performed += OnMovePerformed;
         input.Player.Move.canceled += OnMoveCanceled;
 
@@ -47,7 +55,6 @@ public class PlayerController : MonoBehaviour
 
     private void OnDisable()
     {
-        // UNREGISTER EVENT
         input.Player.Move.performed -= OnMovePerformed;
         input.Player.Move.canceled -= OnMoveCanceled;
 
@@ -61,15 +68,13 @@ public class PlayerController : MonoBehaviour
     {
         if (!canInput)
         {
-            // pastikan berhenti total saat input dimatikan
-            body.linearVelocity = Vector2.zero;
+            desiredVelocity = Vector2.zero;
             anim.SetFloat("Speed", 0);
             return;
         }
 
-        // apply gerak kalau tidak sedang dash
         if (!isDashing)
-            body.linearVelocity = moveInput * speed;
+            desiredVelocity = moveInput * speed;
 
         anim.SetFloat("Speed", moveInput.sqrMagnitude);
         anim.SetFloat("MoveX", moveInput.x);
@@ -77,16 +82,19 @@ public class PlayerController : MonoBehaviour
 
         if (moveInput.sqrMagnitude > 0.01f)
         {
-            // simpan arah terakhir dalam grid (−1,0,1)
             lastDir = new Vector2(Mathf.Round(moveInput.x), Mathf.Round(moveInput.y));
             anim.SetFloat("LastX", lastDir.x);
             anim.SetFloat("LastY", lastDir.y);
         }
 
+        if (Input.GetKeyDown(KeyCode.Tab))
+            inventoryUI.gameObject.SetActive(true);
         dashCooldown += Time.deltaTime;
     }
-
-    // ===== Input System handlers =====
+    void FixedUpdate()
+    {
+        body.linearVelocity = desiredVelocity;
+    }
     private void OnMovePerformed(InputAction.CallbackContext ctx)
     {
         if (!canInput) return;
@@ -110,7 +118,6 @@ public class PlayerController : MonoBehaviour
         StartCoroutine(Interact());
     }
 
-    // ===== Gameplay =====
     private void TryDash()
     {
         if (dashCooldown >= dashCooldownTime && !isDashing)
@@ -123,7 +130,6 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("isDash", true);
         dashCooldown = 0f;
 
-        // kalau lagi tidak menekan arah, pakai lastDir
         var dir = (moveInput.sqrMagnitude > 0.01f) ? moveInput : lastDir;
         body.linearVelocity = dir.normalized * dashSpeed;
 
@@ -135,7 +141,6 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator Interact()
     {
-        Debug.Log("Interact button detected");
         Vector2 origin = (Vector2)transform.position + lastDir * interactDistance;
         Debug.DrawLine(transform.position, origin, Color.red, 1f);
         var col = Physics2D.OverlapCircle(origin, interactRadius, GameLayer.i.InteractableLayer);
@@ -160,6 +165,10 @@ public class PlayerController : MonoBehaviour
             body.linearVelocity = Vector2.zero;
             anim.SetFloat("Speed", 0);
         }
+    }
+    private void OnCollisionEnter2D(Collision2D c)
+    {
+        Debug.Log($"Collide with {c.collider.name}");
     }
 
     private void OnDrawGizmosSelected()

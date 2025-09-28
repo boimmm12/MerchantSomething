@@ -1,9 +1,9 @@
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Items/Create A")]
-public class CaptureBall : ItemBase
+public class A : ItemBase
 {
-    public override bool Use()
+    public override bool Use(PlayerController player)
     {
         return true;
     }
