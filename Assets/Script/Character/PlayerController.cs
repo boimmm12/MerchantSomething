@@ -14,8 +14,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float interactDistance = 0.6f;
     [SerializeField] private float interactRadius = 0.3f;
 
-    [SerializeField] InventoryUI inventoryUI;
-
     private Rigidbody2D body;
     private Animator anim;
 
@@ -41,37 +39,18 @@ public class PlayerController : MonoBehaviour
         body.interpolation = RigidbodyInterpolation2D.Interpolate;
         body.freezeRotation = true;
     }
-
-    private void OnEnable()
+    public void HandleUpdate()
     {
-        input.Enable();
-
-        input.Player.Move.performed += OnMovePerformed;
-        input.Player.Move.canceled += OnMoveCanceled;
-
-        input.Player.Roll.performed += OnRollPerformed;
-        input.Player.Interact.performed += OnInteractPerformed;
-    }
-
-    private void OnDisable()
-    {
-        input.Player.Move.performed -= OnMovePerformed;
-        input.Player.Move.canceled -= OnMoveCanceled;
-
-        input.Player.Roll.performed -= OnRollPerformed;
-        input.Player.Interact.performed -= OnInteractPerformed;
-
-        input.Disable();
-    }
-
-    private void Update()
-    {
+        Debug.Log("go");
         if (!canInput)
         {
             desiredVelocity = Vector2.zero;
             anim.SetFloat("Speed", 0);
             return;
         }
+
+        // --- Movement ---
+        moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
 
         if (!isDashing)
             desiredVelocity = moveInput * speed;
@@ -87,35 +66,15 @@ public class PlayerController : MonoBehaviour
             anim.SetFloat("LastY", lastDir.y);
         }
 
-        if (Input.GetKeyDown(KeyCode.Tab))
-            inventoryUI.gameObject.SetActive(true);
         dashCooldown += Time.deltaTime;
-    }
-    void FixedUpdate()
-    {
-        body.linearVelocity = desiredVelocity;
-    }
-    private void OnMovePerformed(InputAction.CallbackContext ctx)
-    {
-        if (!canInput) return;
-        moveInput = ctx.ReadValue<Vector2>().normalized;
-    }
 
-    private void OnMoveCanceled(InputAction.CallbackContext ctx)
-    {
-        moveInput = Vector2.zero;
-    }
+        // --- Roll/Dash ---
+        if (Input.GetKeyDown(KeyCode.Space))
+            TryDash();
 
-    private void OnRollPerformed(InputAction.CallbackContext ctx)
-    {
-        if (!canInput) return;
-        TryDash();
-    }
-
-    private void OnInteractPerformed(InputAction.CallbackContext ctx)
-    {
-        if (!canInput || isDashing) return;
-        StartCoroutine(Interact());
+        // --- Interact ---
+        if (Input.GetKeyDown(KeyCode.E))
+            StartCoroutine(Interact());
     }
 
     private void TryDash()
@@ -131,12 +90,16 @@ public class PlayerController : MonoBehaviour
         dashCooldown = 0f;
 
         var dir = (moveInput.sqrMagnitude > 0.01f) ? moveInput : lastDir;
-        body.linearVelocity = dir.normalized * dashSpeed;
+        desiredVelocity = dir.normalized * dashSpeed;
 
         yield return new WaitForSeconds(dashDuration);
 
         isDashing = false;
         anim.SetBool("isDash", false);
+    }
+    void FixedUpdate()
+    {
+        body.linearVelocity = desiredVelocity;
     }
 
     private IEnumerator Interact()

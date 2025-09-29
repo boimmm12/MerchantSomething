@@ -8,6 +8,7 @@ public class FreeRoamState : State<GameController>
     public static FreeRoamState i { get; private set; }
     GameController gc;
     PlayerInput input;
+    InputAction inventory;
     void Awake()
     {
         input = GetComponent<PlayerInput>();
@@ -15,12 +16,17 @@ public class FreeRoamState : State<GameController>
     }
     public override void Enter(GameController owner)
     {
+
         gc = owner;
+
     }
 
     public override void Execute()
     {
-        input.SwitchCurrentActionMap("Player");
-        PlayerController.i.EnableInput(true);
+        PlayerController.i.HandleUpdate();
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            gc.StateMachine.Push(InventoryState.i);
+        }
     }
 }

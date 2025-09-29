@@ -10,12 +10,12 @@ public class GameController : MonoBehaviour
     void Awake()
     {
         Instance = this;
-        StateMachine = new StateMachine<GameController>(this);
         playerInput = GetComponent<PlayerInput>();
     }
     void Start()
     {
-        StateMachine.ChangeState(FreeRoamState.i);
+        StateMachine = new StateMachine<GameController>(this);
+        StateMachine.Push(FreeRoamState.i);
         DialogManager.Instance.OnShowDialog += () =>
         {
             StateMachine.Push(DialogueState.i);
@@ -28,6 +28,10 @@ public class GameController : MonoBehaviour
         };
     }
 
+    private void Update()
+    {
+        StateMachine.Execute();
+    }
     private void OnGUI()
     {
         var style = new GUIStyle();
