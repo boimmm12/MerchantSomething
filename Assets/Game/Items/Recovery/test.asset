@@ -16,7 +16,8 @@ MonoBehaviour:
   description: gugugaaga
   questDescription: 
   icon: {fileID: -1769348298, guid: 9fc39562bc6d38040a2ab88ea25b05a5, type: 3}
-  price: 0
+  price: 150
+  negoPrice: 120
   isSellable: 0
   hpAmount: 0
   restoreMaxHP: 0

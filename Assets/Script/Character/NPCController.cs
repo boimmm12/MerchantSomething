@@ -13,7 +13,7 @@ public class NPCController : MonoBehaviour, Interactable
     {
         if (cust != null)
         {
-            yield return cust.Trade();
+            yield return null;
         }
         else
         {

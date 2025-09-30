@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace GDE.GenericSelectionUI
 {
-    public enum SelectionType { List, Grid }
+    public enum SelectionType { List, Grid, SpecialGrid }
     public class SelectionUI<T> : MonoBehaviour where T : ISelectableItem
     {
         List<T> items;
@@ -19,6 +19,7 @@ namespace GDE.GenericSelectionUI
         const float selectionSpeed = 5;
         public event Action<int> OnSelected;
         public event Action OnBack;
+        public event Func<int, int, bool> OnSpecialVertical;
         public void SetSelectionSettings(SelectionType selectionType, int gridWidth)
         {
             this.selectionType = selectionType;
@@ -53,6 +54,8 @@ namespace GDE.GenericSelectionUI
 
             if (selectionType == SelectionType.List)
                 HandleListSelection();
+            else if (selectionType == SelectionType.SpecialGrid)
+                HandleSpecialGridSelection();
             else
                 HandleGridSelection();
 
@@ -91,6 +94,55 @@ namespace GDE.GenericSelectionUI
                 else
                     selectedItem += -(int)Mathf.Sign(v) * gridWidth;
 
+
+                selectionTimer = 1 / selectionSpeed;
+            }
+        }
+        void HandleSpecialGridSelection()
+        {
+            float v = Input.GetAxisRaw("Vertical");
+            float h = Input.GetAxisRaw("Horizontal");
+            if (selectionTimer != 0) return;
+
+            if (items == null || items.Count == 0) return;
+
+            int count = items.Count;
+            int curRow = selectedItem / gridWidth;
+            int curCol = selectedItem % gridWidth;
+
+            // --- Vertical first: coba biarkan pemakai "consume"
+            if (Mathf.Abs(v) > 0.2f)
+            {
+                int dir = (int)Mathf.Sign(v); // up=+1, down=-1
+                bool consumed = OnSpecialVertical?.Invoke(selectedItem, dir) ?? false;
+
+                if (!consumed)
+                {
+                    // pindah di DALAM baris (±1), jaga agar tetap di row yang sama
+                    int rowStart = curRow * gridWidth;
+                    int rowEndExclusive = Mathf.Min(rowStart + gridWidth, count);
+
+                    int next = selectedItem + (dir > 0 ? -1 : +1); // up -> ke kiri (index-1), down -> ke kanan (index+1)
+                    next = Mathf.Clamp(next, rowStart, rowEndExclusive - 1);
+                    selectedItem = next;
+                }
+
+                selectionTimer = 1 / selectionSpeed;
+                return;
+            }
+
+            // --- Horizontal: pindah antar ROW (±gridWidth) sambil mempertahankan kolom bila ada
+            if (Mathf.Abs(h) > 0.2f)
+            {
+                int rows = Mathf.CeilToInt(count / (float)gridWidth);
+                int nextRow = Mathf.Clamp(curRow + (int)Mathf.Sign(h), 0, Mathf.Max(0, rows - 1));
+
+                int rowStart = nextRow * gridWidth;
+                int rowEndExclusive = Mathf.Min(rowStart + gridWidth, count);
+                int maxColInRow = Mathf.Max(0, rowEndExclusive - rowStart - 1);
+
+                int nextCol = Mathf.Clamp(curCol, 0, maxColInRow);
+                selectedItem = rowStart + nextCol;
 
                 selectionTimer = 1 / selectionSpeed;
             }

@@ -48,7 +48,6 @@ public class InventoryUI : SelectionUI<ImageSlot>
                             .ThenBy(slot => slot.Item.Name)
                             .ToList();
 
-        // Kumpulkan komponen yang selectable (ImageSlot) untuk SelectionUI
         var selectableItems = new List<ImageSlot>();
 
         for (int i = 0; i < currentSortedSlots.Count; i++)

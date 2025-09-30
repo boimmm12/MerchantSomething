@@ -7,6 +7,7 @@ public class ItemBase : ScriptableObject
     [SerializeField] string questDescription;
     [SerializeField] Sprite icon;
     [SerializeField] int price;
+    [SerializeField] int negoPrice;
     [SerializeField] bool isSellable;
 
     public virtual string Name => name;
@@ -14,6 +15,7 @@ public class ItemBase : ScriptableObject
     public string QuestDescription => questDescription;
     public Sprite Icon => icon;
     public int Price => price;
+    public int NegoPrice => negoPrice;
     public bool IsSellable => isSellable;
 
     public virtual bool Use(PlayerController player)

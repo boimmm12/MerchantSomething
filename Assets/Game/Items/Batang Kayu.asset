@@ -17,4 +17,5 @@ MonoBehaviour:
   questDescription: 
   icon: {fileID: -9006127005898624009, guid: be38084dc916a1548816ccea838ca061, type: 3}
   price: 500
+  negoPrice: 450
   isSellable: 1

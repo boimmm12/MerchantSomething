@@ -16,7 +16,8 @@ MonoBehaviour:
   description: aku gibran
   questDescription: 
   icon: {fileID: 6836526136283802997, guid: 19fa6875b4896d4449ded15c41865fab, type: 3}
-  price: 0
+  price: 150
+  negoPrice: 100
   isSellable: 0
   hpAmount: 0
   restoreMaxHP: 0
