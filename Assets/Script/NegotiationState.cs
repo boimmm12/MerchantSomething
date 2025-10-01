@@ -16,9 +16,29 @@ public class NegotiationState : State<GameController>
         gc = owner;
 
         negotiationUI.Show();
+        negotiationUI.OnSelected += OnSelectedMenu;
+        negotiationUI.OnBack += OnBack;
     }
     public override void Execute()
     {
         negotiationUI.HandleUpdate();
+    }
+    public override void Exit()
+    {
+        negotiationUI.gameObject.SetActive(false);
+        negotiationUI.OnSelected -= OnSelectedMenu;
+
+        negotiationUI.OnBack -= OnBack;
+    }
+    void OnSelectedMenu(int index)
+    {
+        if (index == 2) // Counter
+        {
+            Debug.Log("pop");
+        }
+    }
+    void OnBack()
+    {
+        gc.StateMachine.Pop();
     }
 }

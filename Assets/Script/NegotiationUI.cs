@@ -19,21 +19,25 @@ public class NegotiationUI : SelectionUI<TextSlot>
 
     void Awake()
     {
-        SetSelectionSettings(SelectionType.SpecialGrid, 2);
         var slots = GetComponentsInChildren<TextSlot>(true).ToList();
         SetItems(slots);
         currentPrice = market.SelectedItem.NegoPrice;
 
+        // Saat init:
+        SetSelectionSettings(SelectionType.SpecialGrid, gridWidth: 2);
         OnSpecialVertical += (index, dir) =>
         {
-            if (index == 1) // hanya di index 1 vertical dipakai adjust harga
+            if (dir == 0) return false; // reset signal
+            if (index == 1)
             {
+                // contoh: adjust harga hanya di index 1
                 currentPrice = Mathf.Max(0, currentPrice + (dir > 0 ? +10 : -10));
                 price.text = currentPrice.ToString();
-                return true; // KONSUMSI → seleksi tidak pindah
+                return true; // dikonsumsi → seleksi tidak pindah
             }
-            return false; // tidak dipakai → seleksi pindah dalam row (±1)
+            return false; // tidak dikonsumsi → seleksi pindah dalam baris
         };
+
     }
 
     void Start()
@@ -67,7 +71,7 @@ public class NegotiationUI : SelectionUI<TextSlot>
     public override void UpdateSelectionInUI()
     {
         base.UpdateSelectionInUI();
-        
+
         price.text = "" + currentPrice;
     }
 }

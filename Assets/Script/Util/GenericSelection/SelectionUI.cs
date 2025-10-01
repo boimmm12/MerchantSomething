@@ -17,6 +17,10 @@ namespace GDE.GenericSelectionUI
         SelectionType selectionType;
         int gridWidth = 2;
         const float selectionSpeed = 5;
+        int _sgLastRow = -1;
+        bool _sgAllowNextVertical = false;
+        int specialGridSnapColumnIndex = 1;
+        bool specialGridSnapToColumnOnRowChange = true;
         public event Action<int> OnSelected;
         public event Action OnBack;
         public event Func<int, int, bool> OnSpecialVertical;
@@ -94,7 +98,6 @@ namespace GDE.GenericSelectionUI
                 else
                     selectedItem += -(int)Mathf.Sign(v) * gridWidth;
 
-
                 selectionTimer = 1 / selectionSpeed;
             }
         }
@@ -102,51 +105,88 @@ namespace GDE.GenericSelectionUI
         {
             float v = Input.GetAxisRaw("Vertical");
             float h = Input.GetAxisRaw("Horizontal");
-            if (selectionTimer != 0) return;
-
             if (items == null || items.Count == 0) return;
 
             int count = items.Count;
             int curRow = selectedItem / gridWidth;
             int curCol = selectedItem % gridWidth;
 
-            // --- Vertical first: coba biarkan pemakai "consume"
-            if (Mathf.Abs(v) > 0.2f)
+            // Deteksi pindah baris (termasuk akibat klik di frame sebelumnya)
+            if (_sgLastRow == -1) _sgLastRow = curRow;
+            if (curRow != _sgLastRow)
             {
-                int dir = (int)Mathf.Sign(v); // up=+1, down=-1
+                _sgLastRow = curRow;
+                _sgAllowNextVertical = true;                 // ← beri bypass 1x
+                OnSpecialVertical?.Invoke(selectedItem, 0);  // ← optional: sinyal reset ke listener
+            }
+
+            // --- VERTICAL: pindah dalam baris (±1) KECUALI kalau listener "consume"
+            bool wantVertical = Mathf.Abs(v) > 0.2f;
+            bool canVertical = (selectionTimer == 0) || _sgAllowNextVertical;
+
+            if (wantVertical && canVertical)
+            {
+                int dir = (v > 0f) ? +1 : -1; // up=+1, down=-1
                 bool consumed = OnSpecialVertical?.Invoke(selectedItem, dir) ?? false;
 
                 if (!consumed)
                 {
-                    // pindah di DALAM baris (±1), jaga agar tetap di row yang sama
                     int rowStart = curRow * gridWidth;
-                    int rowEndExclusive = Mathf.Min(rowStart + gridWidth, count);
+                    int rowEndEx = Mathf.Min(rowStart + gridWidth, count);
 
-                    int next = selectedItem + (dir > 0 ? -1 : +1); // up -> ke kiri (index-1), down -> ke kanan (index+1)
-                    next = Mathf.Clamp(next, rowStart, rowEndExclusive - 1);
-                    selectedItem = next;
+                    // up → kiri (index-1), down → kanan (index+1)
+                    int next = selectedItem + (dir > 0 ? -1 : +1);
+                    next = Mathf.Clamp(next, rowStart, rowEndEx - 1);
+                    if (next != selectedItem)
+                    {
+                        selectedItem = next;
+                        UpdateSelectionInUI();
+                    }
                 }
 
-                selectionTimer = 1 / selectionSpeed;
+                _sgAllowNextVertical = false;       // ← habiskan bypass
+                selectionTimer = 1f / selectionSpeed;
                 return;
             }
 
-            // --- Horizontal: pindah antar ROW (±gridWidth) sambil mempertahankan kolom bila ada
-            if (Mathf.Abs(h) > 0.2f)
+            // --- HORIZONTAL: pindah antar row (±gridWidth) dan aktifkan bypass vertical
+            // --- HORIZONTAL: pindah antar row (±gridWidth) dan aktifkan bypass vertical
+            if (selectionTimer == 0 && Mathf.Abs(h) > 0.2f)
             {
                 int rows = Mathf.CeilToInt(count / (float)gridWidth);
-                int nextRow = Mathf.Clamp(curRow + (int)Mathf.Sign(h), 0, Mathf.Max(0, rows - 1));
+                int nextRow = Mathf.Clamp(curRow + (h > 0 ? +1 : -1), 0, Mathf.Max(0, rows - 1));
 
                 int rowStart = nextRow * gridWidth;
-                int rowEndExclusive = Mathf.Min(rowStart + gridWidth, count);
-                int maxColInRow = Mathf.Max(0, rowEndExclusive - rowStart - 1);
+                int rowEndEx = Mathf.Min(rowStart + gridWidth, count);
+                int maxCol = Mathf.Max(0, rowEndEx - rowStart - 1);
 
-                int nextCol = Mathf.Clamp(curCol, 0, maxColInRow);
-                selectedItem = rowStart + nextCol;
+                // 👇 snap ke kolom harga ketika ganti row
+                int nextCol;
+                if (specialGridSnapToColumnOnRowChange)
+                {
+                    int preferred = Mathf.Clamp(specialGridSnapColumnIndex, 0, maxCol);
+                    nextCol = preferred;
+                }
+                else
+                {
+                    nextCol = Mathf.Clamp(curCol, 0, maxCol);
+                }
 
-                selectionTimer = 1 / selectionSpeed;
+                int next = rowStart + nextCol;
+                if (next != selectedItem)
+                {
+                    selectedItem = next;
+                    _sgLastRow = nextRow;
+                    _sgAllowNextVertical = true;                 // tetap: “Up” langsung bisa
+                    OnSpecialVertical?.Invoke(selectedItem, 0);  // reset listener (opsional)
+                    UpdateSelectionInUI();
+                }
+
+                selectionTimer = 1f / selectionSpeed;
             }
+
         }
+
         public virtual void UpdateSelectionInUI()
         {
             for (int i = 0; i < items.Count; i++)
