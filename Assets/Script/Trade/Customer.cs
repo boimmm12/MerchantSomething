@@ -7,6 +7,8 @@ public enum CustomerState { Idle, Walking, Buying }
 
 public class Customer : MonoBehaviour
 {
+    [SerializeField] CustomerNegotiator negotiator;
+
     [SerializeField] float timeBetweenPattern = 0.6f;
     [SerializeField] List<Vector2> movementPattern = new();
     [SerializeField] bool patternAsOffset = true;
@@ -186,3 +188,12 @@ public class Customer : MonoBehaviour
         IsInSellingMenu = false;
     }
 }
+public enum CustomerType
+{
+    Pelit,
+    TawarMenawar,
+    Normal,
+    Dermawan,
+    TidakSabar
+}
+
