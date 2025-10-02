@@ -74,4 +74,10 @@ public class NegotiationUI : SelectionUI<TextSlot>
 
         price.text = "" + currentPrice;
     }
+    public int CurrentPrice => currentPrice;
+    public void SetPrice(int value)
+    {
+        currentPrice = Mathf.Max(0, value);
+        if (price) price.text = currentPrice.ToString();
+    }
 }

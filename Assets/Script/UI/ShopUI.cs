@@ -24,7 +24,7 @@ public class ShopUI : SelectionUI<TextSlot>
             itemImage.enabled = itemImage.sprite != null;
             itemImage.preserveAspect = true;
         }
-        if(negoText) negoText.text = nego.ToString();
+        if (negoText) negoText.text = nego.ToString();
 
         gameObject.SetActive(true);
     }
@@ -45,6 +45,5 @@ public class ShopUI : SelectionUI<TextSlot>
     {
         base.HandleUpdate();
     }
-
     public void Hide() => gameObject.SetActive(false);
 }

@@ -58,6 +58,7 @@ public class SellingState : State<GameController>
 
         shopUI.OnBack -= OnBack;
         shopUI.OnSelected -= OnSelectedMenu;
+
     }
     void OnBack()
     {

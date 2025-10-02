@@ -960,6 +960,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   negotiationUI: {fileID: 2017527705}
+  negotiator: {fileID: 1553592007}
+  market: {fileID: 1135087982}
+  concessionRate: 0.6
 --- !u!1 &180530264
 GameObject:
   m_ObjectHideFlags: 0
