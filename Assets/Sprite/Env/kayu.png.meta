@@ -1,0 +1,1051 @@
+fileFormatVersion: 2
+guid: 2c58abe1a7549934b996bef3bd95cd0e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6706627169678254852
+    second: kayu_0
+  - first:
+      213: 4875209339647711557
+    second: kayu_1
+  - first:
+      213: 1520847934428117151
+    second: kayu_2
+  - first:
+      213: -2989580562958538338
+    second: kayu_3
+  - first:
+      213: 1669298056551319016
+    second: kayu_4
+  - first:
+      213: 2539722074628551132
+    second: kayu_5
+  - first:
+      213: 1611946149210172794
+    second: kayu_6
+  - first:
+      213: 3719477677180632609
+    second: kayu_7
+  - first:
+      213: -143178480576551098
+    second: kayu_8
+  - first:
+      213: 7666576059763106795
+    second: kayu_9
+  - first:
+      213: 5883382247408411956
+    second: kayu_10
+  - first:
+      213: -5013357848357555739
+    second: kayu_11
+  - first:
+      213: -2822464522419961194
+    second: kayu_12
+  - first:
+      213: -4499277737839402030
+    second: kayu_13
+  - first:
+      213: -5243394549583656641
+    second: kayu_14
+  - first:
+      213: 2714272936943972452
+    second: kayu_15
+  - first:
+      213: 6422374047580038041
+    second: kayu_16
+  - first:
+      213: -6397387826696034041
+    second: kayu_17
+  - first:
+      213: 188229341299504983
+    second: kayu_18
+  - first:
+      213: -8573266045722689230
+    second: kayu_19
+  - first:
+      213: 7398796700350765309
+    second: kayu_20
+  - first:
+      213: 4458065237462560398
+    second: kayu_21
+  - first:
+      213: -2962956610996892005
+    second: kayu_22
+  - first:
+      213: 2133211537753539690
+    second: kayu_23
+  - first:
+      213: -472865501992492778
+    second: kayu_24
+  - first:
+      213: 1011005012614925282
+    second: kayu_25
+  - first:
+      213: -1484659950348106585
+    second: kayu_26
+  - first:
+      213: 6723776942399951565
+    second: kayu_27
+  - first:
+      213: -5865109423411458501
+    second: kayu_28
+  - first:
+      213: 1012620138074096294
+    second: kayu_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: kayu_0
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 1956
+        width: 793
+        height: 436
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc18565f164de2a0800000000000000
+      internalID: -6706627169678254852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 1340
+        width: 63
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5495e5f701938a340800000000000000
+      internalID: 4875209339647711557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_2
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1344
+        width: 62
+        height: 229
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9879f873232b1510800000000000000
+      internalID: 1520847934428117151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_3
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1347
+        width: 66
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99a1754150e286d0800000000000000
+      internalID: -2989580562958538338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_4
+      rect:
+        serializedVersion: 2
+        x: 509
+        y: 1344
+        width: 66
+        height: 222
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5cdf4fcb98a2710800000000000000
+      internalID: 1669298056551319016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1465
+        width: 634
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd1f37655c7ee3320800000000000000
+      internalID: 2539722074628551132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_6
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 1116
+        width: 1004
+        height: 440
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7d2bb47b78ce5610800000000000000
+      internalID: 1611946149210172794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_7
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1339
+        width: 398
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12eb852ad3d3e9330800000000000000
+      internalID: 3719477677180632609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_8
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 1268
+        width: 44
+        height: 85
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64721c53ee3530ef0800000000000000
+      internalID: -143178480576551098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_9
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1082
+        width: 59
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be3a1bd9e46256a60800000000000000
+      internalID: 7666576059763106795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_10
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1078
+        width: 59
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4352e968bf8f5a150800000000000000
+      internalID: 5883382247408411956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_11
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 1079
+        width: 62
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e13bbc4999fc6ab0800000000000000
+      internalID: -5013357848357555739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_12
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1079
+        width: 62
+        height: 226
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 692040e887794d8d0800000000000000
+      internalID: -2822464522419961194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_13
+      rect:
+        serializedVersion: 2
+        x: 608
+        y: 1218
+        width: 398
+        height: 91
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d362425cba5f81c0800000000000000
+      internalID: -4499277737839402030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_14
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1093
+        width: 614
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f39c8d61078bb37b0800000000000000
+      internalID: -5243394549583656641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_15
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 885
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4607006fad80ba520800000000000000
+      internalID: 2714272936943972452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_16
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 212
+        width: 1657
+        height: 761
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99322b84b2bd02950800000000000000
+      internalID: 6422374047580038041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_17
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 800
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 709ef5b9aa9e737a0800000000000000
+      internalID: -6397387826696034041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_18
+      rect:
+        serializedVersion: 2
+        x: 2123
+        y: 827
+        width: 378
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7577670b699bc9200800000000000000
+      internalID: 188229341299504983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 717
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23108cb54f3a50980800000000000000
+      internalID: -8573266045722689230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_20
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 632
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df85db1066ecda660800000000000000
+      internalID: 7398796700350765309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_21
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 548
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8e2970b6ba3edd30800000000000000
+      internalID: 4458065237462560398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_22
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 589
+        width: 377
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e82a429a671e6d0800000000000000
+      internalID: -2962956610996892005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_23
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 381
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6480926790ba9d10800000000000000
+      internalID: 2133211537753539690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_24
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 465
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 611633fc45b0079f0800000000000000
+      internalID: -472865501992492778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_25
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 369
+        width: 378
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eb4d03d3bfc70e00800000000000000
+      internalID: 1011005012614925282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_26
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 175
+        width: 189
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a4804724ad656be0800000000000000
+      internalID: -1484659950348106585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_27
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 297
+        width: 188
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc216b84187af4d50800000000000000
+      internalID: 6723776942399951565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_28
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 143
+        width: 378
+        height: 125
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3e83c8dd02fa9ea0800000000000000
+      internalID: -5865109423411458501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_29
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 82
+        width: 1500
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a2405686ac8d0e00800000000000000
+      internalID: 1012620138074096294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_30
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1953
+        width: 739
+        height: 432
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a3dca88b73bcb409077ab43f4386b3
+      internalID: -1111986344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_31
+      rect:
+        serializedVersion: 2
+        x: 1741
+        y: 1949
+        width: 737
+        height: 437
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f382cf5060ae9d647b6deb17600aa28a
+      internalID: 1101594184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_32
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 1612
+        width: 303
+        height: 291
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e4d43c64673ac541862379a76324b5f
+      internalID: -764981762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_33
+      rect:
+        serializedVersion: 2
+        x: 375
+        y: 1637
+        width: 250
+        height: 238
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e4f0f1d48d5c404788a58c323d6942d
+      internalID: 907859807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_34
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 1666
+        width: 217
+        height: 161
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b5a5d496f895804d9f3934a6be62c4a
+      internalID: -2107178622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_35
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1616
+        width: 252
+        height: 266
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013218eb06aa83845a31a1515b745b9c
+      internalID: -205575580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_36
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 1606
+        width: 135
+        height: 311
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c56c89a59a8d1fe4abb499ec164a0597
+      internalID: -363492642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: kayu_37
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 1640
+        width: 712
+        height: 265
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cd2c9b10b6252740855740eaab2cbbc
+      internalID: 394566770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b79f41003a7ff84478289628409f5b39
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      kayu_30: -1111986344
+      kayu_31: 1101594184
+      kayu_32: -764981762
+      kayu_33: 907859807
+      kayu_34: -2107178622
+      kayu_35: -205575580
+      kayu_36: -363492642
+      kayu_37: 394566770
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

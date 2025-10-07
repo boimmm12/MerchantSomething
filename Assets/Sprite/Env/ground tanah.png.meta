@@ -1,0 +1,631 @@
+fileFormatVersion: 2
+guid: e9a0e3eb3f34ecf4180d89cfe08ee6de
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3466515722775972568
+    second: ground tanah_0
+  - first:
+      213: 3586001240325843059
+    second: ground tanah_1
+  - first:
+      213: -2550313231347588814
+    second: ground tanah_2
+  - first:
+      213: 5990408768752928097
+    second: ground tanah_3
+  - first:
+      213: -965082748521463083
+    second: ground tanah_4
+  - first:
+      213: 2087365002223025309
+    second: ground tanah_5
+  - first:
+      213: -5981529624955460576
+    second: ground tanah_6
+  - first:
+      213: 7473084283680995368
+    second: ground tanah_7
+  - first:
+      213: -4726182439879398315
+    second: ground tanah_8
+  - first:
+      213: -7077435198760070434
+    second: ground tanah_9
+  - first:
+      213: -5031812932227769117
+    second: ground tanah_10
+  - first:
+      213: 8303404641292673964
+    second: ground tanah_11
+  - first:
+      213: -1178472537627383238
+    second: ground tanah_12
+  - first:
+      213: 5742776747602751680
+    second: ground tanah_13
+  - first:
+      213: 8391310692079342716
+    second: ground tanah_14
+  - first:
+      213: 5422737807085200069
+    second: ground tanah_15
+  - first:
+      213: 8854607227415651613
+    second: ground tanah_16
+  - first:
+      213: -5451388180506644858
+    second: ground tanah_17
+  - first:
+      213: 5395509087298212004
+    second: ground tanah_18
+  - first:
+      213: 6212864794050093630
+    second: ground tanah_19
+  - first:
+      213: 3368814372057203244
+    second: ground tanah_20
+  - first:
+      213: -1871814163276280168
+    second: ground tanah_21
+  - first:
+      213: 454305872003183192
+    second: ground tanah_22
+  - first:
+      213: 1412990017707889549
+    second: ground tanah_23
+  - first:
+      213: -5076845545519017115
+    second: ground tanah_24
+  - first:
+      213: -7910178163609805015
+    second: ground tanah_25
+  - first:
+      213: 6472968933837762243
+    second: ground tanah_26
+  - first:
+      213: -2105403492363994336
+    second: ground tanah_27
+  - first:
+      213: 6106723039415982528
+    second: ground tanah_28
+  - first:
+      213: 3861276969746994874
+    second: ground tanah_29
+  - first:
+      213: 7794095274095169431
+    second: ground tanah_30
+  - first:
+      213: -8517867941654263944
+    second: ground tanah_31
+  - first:
+      213: 3931952746087682796
+    second: ground tanah_32
+  - first:
+      213: 5559218399459297972
+    second: ground tanah_33
+  - first:
+      213: 1740437526125933670
+    second: ground tanah_34
+  - first:
+      213: 2052108113561337284
+    second: ground tanah_35
+  - first:
+      213: -9073378965547778516
+    second: ground tanah_36
+  - first:
+      213: -8436683524474321954
+    second: ground tanah_37
+  - first:
+      213: 5741083093665956870
+    second: ground tanah_38
+  - first:
+      213: -1736310053374536116
+    second: ground tanah_39
+  - first:
+      213: -1650310637212413478
+    second: ground tanah_40
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ground tanah_0
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1518
+        width: 150
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8da4e58fea98b1030800000000000000
+      internalID: 3466515722775972568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_1
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1518
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3786bbde02904c130800000000000000
+      internalID: 3586001240325843059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_2
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1518
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2316c83d0a77b9cd0800000000000000
+      internalID: -2550313231347588814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_3
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1518
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16547e06905322350800000000000000
+      internalID: 5990408768752928097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_4
+      rect:
+        serializedVersion: 2
+        x: 1526
+        y: 751
+        width: 1043
+        height: 1091
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d2458b7a565b92f0800000000000000
+      internalID: -965082748521463083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_5
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 1114
+        width: 150
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9cf512096fc7fc10800000000000000
+      internalID: 2087365002223025309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_6
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 1114
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024ed036f765dfca0800000000000000
+      internalID: -5981529624955460576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_7
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 1114
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8283c59df8ab5b760800000000000000
+      internalID: 7473084283680995368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_8
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 1114
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55cac4f7c1a396eb0800000000000000
+      internalID: -4726182439879398315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_9
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 710
+        width: 150
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed25f014f26e7cd90800000000000000
+      internalID: -7077435198760070434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_10
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 710
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ecd85e3cc86b2ab0800000000000000
+      internalID: -5031812932227769117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_11
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 710
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca36496278e9b3370800000000000000
+      internalID: 8303404641292673964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_12
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 710
+        width: 349
+        height: 365
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3aaa29887935afe0800000000000000
+      internalID: -1178472537627383238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_13
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 521
+        width: 349
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c03c31860172bf40800000000000000
+      internalID: 5742776747602751680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_14
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 521
+        width: 349
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7493598d9ce37470800000000000000
+      internalID: 8391310692079342716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_15
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 521
+        width: 349
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2e46dfd4f614b40800000000000000
+      internalID: 5422737807085200069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground tanah_16
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 79
+        width: 350
+        height: 366
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1567bf0c52e1ea70800000000000000
+      internalID: 8854607227415651613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: bc40f48335278a6479507128cd1c0d1c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ground tanah_0: 3466515722775972568
+      ground tanah_1: 3586001240325843059
+      ground tanah_10: -5031812932227769117
+      ground tanah_11: 8303404641292673964
+      ground tanah_12: -1178472537627383238
+      ground tanah_13: 5742776747602751680
+      ground tanah_14: 8391310692079342716
+      ground tanah_15: 5422737807085200069
+      ground tanah_16: 8854607227415651613
+      ground tanah_2: -2550313231347588814
+      ground tanah_3: 5990408768752928097
+      ground tanah_4: -965082748521463083
+      ground tanah_5: 2087365002223025309
+      ground tanah_6: -5981529624955460576
+      ground tanah_7: 7473084283680995368
+      ground tanah_8: -4726182439879398315
+      ground tanah_9: -7077435198760070434
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

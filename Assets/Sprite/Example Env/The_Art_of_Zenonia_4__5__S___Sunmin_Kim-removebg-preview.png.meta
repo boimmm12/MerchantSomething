@@ -1,0 +1,1067 @@
+fileFormatVersion: 2
+guid: 6b3a5e1b5bd51ef42a230a18018943ab
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 185163212877338343
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_0
+  - first:
+      213: -5990105815496932665
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_1
+  - first:
+      213: 4980848846403954173
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_2
+  - first:
+      213: 7631581617422838873
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_3
+  - first:
+      213: 8859873655284462466
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_4
+  - first:
+      213: 6786718761765191859
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_5
+  - first:
+      213: -6294465329844643402
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_6
+  - first:
+      213: 8420447819351075121
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_7
+  - first:
+      213: 705521060740925893
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_8
+  - first:
+      213: -5535031903233687591
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_9
+  - first:
+      213: -2279114279736546772
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_10
+  - first:
+      213: -5366603228450949783
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_11
+  - first:
+      213: -2555593512686065570
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_12
+  - first:
+      213: -9085695900545938590
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_13
+  - first:
+      213: 5086939366487518870
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_14
+  - first:
+      213: 1564190624794693585
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_15
+  - first:
+      213: -2929795052339310054
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_16
+  - first:
+      213: 2620207102186039555
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_17
+  - first:
+      213: 4927007098470774744
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_18
+  - first:
+      213: 1641990420112051281
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_19
+  - first:
+      213: 420650615610647070
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_20
+  - first:
+      213: 7664637545248103698
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_21
+  - first:
+      213: -5383049446070757278
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_22
+  - first:
+      213: 306510399029993252
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_23
+  - first:
+      213: 2521967165740759458
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_24
+  - first:
+      213: 2839348379771240304
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_25
+  - first:
+      213: -7435072104303613388
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_26
+  - first:
+      213: 392619480182053187
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_27
+  - first:
+      213: 8574995984571735472
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_28
+  - first:
+      213: 6356323793724413568
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_29
+  - first:
+      213: 3894382766022207403
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_30
+  - first:
+      213: -5539017353952342080
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_31
+  - first:
+      213: -4104097063580262779
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_32
+  - first:
+      213: -130121487784360175
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_33
+  - first:
+      213: 2950788993448517996
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_34
+  - first:
+      213: 5237957571810315032
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_35
+  - first:
+      213: -1545385536760321840
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_36
+  - first:
+      213: -7893302267286711110
+    second: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 263
+        width: 447
+        height: 296
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e6160906f4d19200800000000000000
+      internalID: 185163212877338343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_1
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 218
+        width: 40
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2cd4c6f7ededca0800000000000000
+      internalID: -5990105815496932665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_2
+      rect:
+        serializedVersion: 2
+        x: 295
+        y: 228
+        width: 38
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df562d9d2a78f1540800000000000000
+      internalID: 4980848846403954173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_3
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 237
+        width: 30
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ca3e41c03d8e960800000000000000
+      internalID: 7631581617422838873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_4
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 227
+        width: 62
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 283721ad52894fa70800000000000000
+      internalID: 8859873655284462466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_5
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 222
+        width: 25
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b04e7991c44f2e50800000000000000
+      internalID: 6786718761765191859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_6
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 223
+        width: 26
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b9199bc12195a8a0800000000000000
+      internalID: -6294465329844643402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_7
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 222
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1392222ada07bd470800000000000000
+      internalID: 8420447819351075121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_8
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 221
+        width: 38
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c9050faaa38ac900800000000000000
+      internalID: 705521060740925893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_9
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 243
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df3d435fcd9f23b0800000000000000
+      internalID: -5535031903233687591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_10
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 235
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2a68c943a5fe50e0800000000000000
+      internalID: -2279114279736546772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 240
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96577b51ccef585b0800000000000000
+      internalID: -5366603228450949783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_12
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 229
+        width: 25
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e58ed068d35b88cd0800000000000000
+      internalID: -2555593512686065570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_13
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 224
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b8cbe67bf19e180800000000000000
+      internalID: -9085695900545938590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_14
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 227
+        width: 8
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e607de660789640800000000000000
+      internalID: 5086939366487518870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_15
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 229
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df42e7f51f15b510800000000000000
+      internalID: 1564190624794693585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_16
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 148
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a125e903ce64757d0800000000000000
+      internalID: -2929795052339310054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_17
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 181
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30921cb1a78dc5420800000000000000
+      internalID: 2620207102186039555
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 146
+        width: 27
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d7bd260ade306440800000000000000
+      internalID: 4927007098470774744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_19
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 167
+        width: 41
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c8f53669589c610800000000000000
+      internalID: 1641990420112051281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_20
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 169
+        width: 29
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e12a506918376d500800000000000000
+      internalID: 420650615610647070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_21
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 172
+        width: 25
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d92a80d334e5a60800000000000000
+      internalID: 7664637545248103698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_22
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 173
+        width: 27
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 268d696ac019b45b0800000000000000
+      internalID: -5383049446070757278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_23
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 11
+        width: 162
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42f552e7591f04400800000000000000
+      internalID: 306510399029993252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_24
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 128
+        width: 15
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a93d2976c3dff220800000000000000
+      internalID: 2521967165740759458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_25
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 12
+        width: 144
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07f78d1de44676720800000000000000
+      internalID: 2839348379771240304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_26
+      rect:
+        serializedVersion: 2
+        x: 27
+        y: 88
+        width: 20
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a2197505151d890800000000000000
+      internalID: -7435072104303613388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_27
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 100
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3495628465dd27500800000000000000
+      internalID: 392619480182053187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_28
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 95
+        width: 12
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bd9cca6a61800770800000000000000
+      internalID: 8574995984571735472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_29
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 96
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0869e4a20d2363850800000000000000
+      internalID: 6356323793724413568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_30
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 66
+        width: 23
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7282c0e70ab0630800000000000000
+      internalID: 3894382766022207403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_31
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 71
+        width: 24
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf42f440157123b0800000000000000
+      internalID: -5539017353952342080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_32
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 48
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58e139117715b07c0800000000000000
+      internalID: -4104097063580262779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_33
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 48
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117c7fe3237b13ef0800000000000000
+      internalID: -130121487784360175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_34
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 49
+        width: 29
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61a1a1a4fe43f820800000000000000
+      internalID: 2950788993448517996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_35
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 35
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81b4250e8a6f0b840800000000000000
+      internalID: 5237957571810315032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_36
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 35
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8ef58ca00bd8ae0800000000000000
+      internalID: -1545385536760321840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_37
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 24
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4179d886b557290800000000000000
+      internalID: -7893302267286711110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
