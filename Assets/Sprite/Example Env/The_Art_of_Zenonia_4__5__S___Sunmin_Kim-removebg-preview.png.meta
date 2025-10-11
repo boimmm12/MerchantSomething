@@ -214,12 +214,12 @@ TextureImporter:
       name: The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 263
-        width: 447
-        height: 296
+        x: 252
+        y: 303
+        width: 195
+        height: 256
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -241,7 +241,7 @@ TextureImporter:
         width: 40
         height: 46
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,7 +263,7 @@ TextureImporter:
         width: 38
         height: 60
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -285,7 +285,7 @@ TextureImporter:
         width: 30
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -307,7 +307,7 @@ TextureImporter:
         width: 62
         height: 55
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -329,7 +329,7 @@ TextureImporter:
         width: 25
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -351,7 +351,7 @@ TextureImporter:
         width: 26
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -373,7 +373,7 @@ TextureImporter:
         width: 31
         height: 36
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -395,7 +395,7 @@ TextureImporter:
         width: 38
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -417,7 +417,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -439,7 +439,7 @@ TextureImporter:
         width: 23
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -461,7 +461,7 @@ TextureImporter:
         width: 6
         height: 7
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -483,7 +483,7 @@ TextureImporter:
         width: 25
         height: 28
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -505,7 +505,7 @@ TextureImporter:
         width: 18
         height: 12
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -527,7 +527,7 @@ TextureImporter:
         width: 8
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -549,7 +549,7 @@ TextureImporter:
         width: 6
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -571,7 +571,7 @@ TextureImporter:
         width: 26
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -593,7 +593,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -615,7 +615,7 @@ TextureImporter:
         width: 27
         height: 45
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,7 +637,7 @@ TextureImporter:
         width: 41
         height: 47
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,7 +659,7 @@ TextureImporter:
         width: 29
         height: 42
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,7 +681,7 @@ TextureImporter:
         width: 25
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -703,7 +703,7 @@ TextureImporter:
         width: 27
         height: 29
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,7 +725,7 @@ TextureImporter:
         width: 162
         height: 198
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -747,7 +747,7 @@ TextureImporter:
         width: 15
         height: 50
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -769,7 +769,7 @@ TextureImporter:
         width: 144
         height: 152
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -791,7 +791,7 @@ TextureImporter:
         width: 20
         height: 13
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -813,7 +813,7 @@ TextureImporter:
         width: 14
         height: 14
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -835,7 +835,7 @@ TextureImporter:
         width: 12
         height: 11
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -857,7 +857,7 @@ TextureImporter:
         width: 21
         height: 17
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -879,7 +879,7 @@ TextureImporter:
         width: 23
         height: 20
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -901,7 +901,7 @@ TextureImporter:
         width: 24
         height: 23
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -923,7 +923,7 @@ TextureImporter:
         width: 10
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -945,7 +945,7 @@ TextureImporter:
         width: 11
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -967,7 +967,7 @@ TextureImporter:
         width: 29
         height: 21
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -989,7 +989,7 @@ TextureImporter:
         width: 8
         height: 8
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1011,7 +1011,7 @@ TextureImporter:
         width: 9
         height: 9
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1033,7 +1033,7 @@ TextureImporter:
         width: 12
         height: 10
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1050,7 +1050,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9b1f535a2fffd3047a5f9bdeec67f1df
     internalID: 0
     vertices: []
     indices: 
@@ -1059,7 +1059,45 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_0: 185163212877338343
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_1: -5990105815496932665
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_10: -2279114279736546772
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_11: -5366603228450949783
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_12: -2555593512686065570
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_13: -9085695900545938590
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_14: 5086939366487518870
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_15: 1564190624794693585
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_16: -2929795052339310054
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_17: 2620207102186039555
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_18: 4927007098470774744
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_19: 1641990420112051281
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_2: 4980848846403954173
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_20: 420650615610647070
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_21: 7664637545248103698
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_22: -5383049446070757278
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_23: 306510399029993252
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_24: 2521967165740759458
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_25: 2839348379771240304
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_26: -7435072104303613388
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_27: 392619480182053187
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_28: 8574995984571735472
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_29: 6356323793724413568
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_3: 7631581617422838873
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_30: 3894382766022207403
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_31: -5539017353952342080
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_32: -4104097063580262779
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_33: -130121487784360175
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_34: 2950788993448517996
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_35: 5237957571810315032
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_36: -1545385536760321840
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_37: -7893302267286711110
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_4: 8859873655284462466
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_5: 6786718761765191859
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_6: -6294465329844643402
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_7: 8420447819351075121
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_8: 705521060740925893
+      The_Art_of_Zenonia_4__5__S___Sunmin_Kim-removebg-preview_9: -5535031903233687591
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
