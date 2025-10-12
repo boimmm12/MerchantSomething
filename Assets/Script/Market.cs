@@ -87,9 +87,11 @@ public class Market : MonoBehaviour, Interactable
             yield return GameController.Instance.StateMachine.PushAndWait(SellingState.i);
             yield break;
         }
-
-        Debug.Log($"{name}: Tidak ada customer yang menunggu.");
-        yield return null;
+        else
+        {
+            yield return GameController.Instance.StateMachine.PushAndWait(InventoryState.i);
+            yield break;
+        }
     }
     public ItemBase SelectedItem => waitingItem;
     public Customer SelectedCustomer => waitingCustomer;

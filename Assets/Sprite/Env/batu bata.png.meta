@@ -240,6 +240,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1334,7 +1360,56 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      batu bata_0: 8288015561050303439
+      batu bata_1: -2389050809638584812
+      batu bata_10: 7238577373420116967
+      batu bata_11: 7914833750758538063
+      batu bata_12: -3725774805977197887
+      batu bata_13: -7531061710023591834
+      batu bata_14: -1346114853409292535
+      batu bata_15: -6697588874463542171
+      batu bata_16: 2679960456426576196
+      batu bata_17: -8260741449034249903
+      batu bata_18: 4803609701737963364
+      batu bata_19: -5642063089518127363
+      batu bata_2: 820256671963980367
+      batu bata_20: -5522225917628614239
+      batu bata_21: 5921882256073584920
+      batu bata_22: 1369617047230231278
+      batu bata_23: -507285796778925153
+      batu bata_24: 6782988506424074116
+      batu bata_25: -3436467151316163058
+      batu bata_26: -3085464169405354989
+      batu bata_27: 7732265096347675986
+      batu bata_28: 4364154273738316616
+      batu bata_29: 3753907682438565528
+      batu bata_3: 7530983017005762791
+      batu bata_30: -973399212363053868
+      batu bata_31: 4266249941430682946
+      batu bata_32: 3555086880145386143
+      batu bata_33: 2559310783211746756
+      batu bata_34: -6748096821270745398
+      batu bata_35: 4507954470845216128
+      batu bata_36: 1267241215507590995
+      batu bata_37: -2412382279021025073
+      batu bata_38: -7230830073321344424
+      batu bata_39: -4774720317752436298
+      batu bata_4: -8395060547938235859
+      batu bata_40: -8636436412134854168
+      batu bata_41: 4336028055554364017
+      batu bata_42: -2690838721786039090
+      batu bata_43: -9063184657675740094
+      batu bata_44: 3655780446665007854
+      batu bata_45: 6812394419549146206
+      batu bata_46: -372283282858868322
+      batu bata_47: 5088162509526417986
+      batu bata_48: 3805887030497583865
+      batu bata_5: 6547854924706645887
+      batu bata_6: -7904217330825478314
+      batu bata_7: 6886328157784437245
+      batu bata_8: 60899284235819707
+      batu bata_9: 585826585887139593
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
