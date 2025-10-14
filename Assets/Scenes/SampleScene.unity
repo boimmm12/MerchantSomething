@@ -2878,6 +2878,7 @@ GameObject:
   - component: {fileID: 112975096}
   - component: {fileID: 112975097}
   - component: {fileID: 112975098}
+  - component: {fileID: 112975099}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -3132,6 +3133,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   active: []
+--- !u!114 &112975099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 112975088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 645ffb45b78f28b47a6fa59c2bb85ed6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &116110652
 GameObject:
   m_ObjectHideFlags: 0
@@ -4360,6 +4373,7 @@ GameObject:
   - component: {fileID: 156548996}
   - component: {fileID: 156548997}
   - component: {fileID: 156548998}
+  - component: {fileID: 156548999}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4553,6 +4567,19 @@ MonoBehaviour:
   negotiator: {fileID: 1553592007}
   market: {fileID: 1135087982}
   concessionRate: 0.6
+--- !u!114 &156548999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156548986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a08e1eac36bfdb948bd21f7daf39a729, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transferUI: {fileID: 382129737}
 --- !u!1 &169893325
 GameObject:
   m_ObjectHideFlags: 0
@@ -10504,7 +10531,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RBoxM: {fileID: 189186895}
   LBoxM: {fileID: 637385143}
-  bButton: {fileID: 0}
   movingPockiImage: {fileID: 1635547204}
   boxSlots:
   - {fileID: 1722987562}

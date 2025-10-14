@@ -89,7 +89,7 @@ public class Market : MonoBehaviour, Interactable
         }
         else
         {
-            yield return GameController.Instance.StateMachine.PushAndWait(InventoryState.i);
+            yield return GameController.Instance.StateMachine.PushAndWait(TransferState.i);
             yield break;
         }
     }

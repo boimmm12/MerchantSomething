@@ -10,7 +10,7 @@ public class TransferUI : SelectionUI<ImageSlot>
 {
     [SerializeField] Button RBoxM;
     [SerializeField] Button LBoxM;
-    [SerializeField] Button bButton;
+    // [SerializeField] Button bButton;
     [SerializeField] Image movingPockiImage;
     [SerializeField] List<ImageSlot> boxSlots;
 
@@ -26,16 +26,22 @@ public class TransferUI : SelectionUI<ImageSlot>
     public int SelectedBox { get; set; } = 0;
     private void Awake()
     {
+        SetSelectionSettings(SelectionType.Grid, gridWidth: 6);
+        inventSlots.Clear();
+        marketSlots.Clear();
+
         foreach (var boxSlot in boxSlots)
         {
             var marketSlot = boxSlot.GetComponent<BoxMarketUI>();
-            if (marketSlots != null)
+            if (marketSlot != null)
             {
                 marketSlots.Add(marketSlot);
             }
             else
             {
-                inventSlots.Add(boxSlot.GetComponent<BoxInventoryUI>());
+                var invSlot = boxSlot.GetComponent<BoxInventoryUI>();
+                if (invSlot != null)
+                    inventSlots.Add(invSlot);
             }
         }
         inventory = Inventory.GetInventory();
@@ -48,6 +54,15 @@ public class TransferUI : SelectionUI<ImageSlot>
     private void Start()
     {
         SetItems(boxSlots);
+        var inv = Inventory.GetInventory();
+        foreach (var slot in inv.GetSlotsByCategories(0))
+        {
+            Debug.Log($"Item: {slot.Item?.Name}, Count: {slot.Count}");
+        }
+        Debug.Log(storageBoxes != null
+            ? $"[TransferUI] StorageBoxes OK, box count: {storageBoxes.NumOfBoxes}"
+            : "[TransferUI] storageBoxes == NULL");
+
     }
 
     public void SetupActionButtons()
@@ -64,7 +79,7 @@ public class TransferUI : SelectionUI<ImageSlot>
             };
         }
 
-        bButton.onClick.AddListener(() => OnBackButton());
+        // bButton.onClick.AddListener(() => OnBackButton());
         RBoxM.onClick.AddListener(() => isRbox = true);
         LBoxM.onClick.AddListener(() => isLbox = true);
     }
@@ -94,15 +109,27 @@ public class TransferUI : SelectionUI<ImageSlot>
 
     public void SetDataInMarketSlots()
     {
+        int boxIndex = SelectedBox;
+        int totalSlots = storageBoxes.NumOfSlots;
+
         for (int i = 0; i < marketSlots.Count; i++)
         {
-            var item = storageBoxes.GetItem(SelectedBox, i);
-            if (item != null)
-                marketSlots[i].SetData(item);
+            if (i < totalSlots)
+            {
+                var item = storageBoxes.GetItem(boxIndex, i);
+                if (item != null)
+                    marketSlots[i].SetData(item);
+                else
+                    marketSlots[i].ClearData();
+            }
             else
+            {
+                // kalau UI slot lebih banyak daripada jumlah slot sebenarnya, kosongkan sisanya
                 marketSlots[i].ClearData();
+            }
         }
     }
+
     public override void HandleUpdate()
     {
         int prevSelectedBox = SelectedBox;
