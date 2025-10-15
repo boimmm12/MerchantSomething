@@ -13,6 +13,7 @@ public class TransferUI : SelectionUI<ImageSlot>
     // [SerializeField] Button bButton;
     [SerializeField] Image movingPockiImage;
     [SerializeField] List<ImageSlot> boxSlots;
+    // [SerializeField] Text boxNameText;
 
     bool isRbox = false;
     bool isLbox = false;
@@ -163,5 +164,99 @@ public class TransferUI : SelectionUI<ImageSlot>
 
         if (movingPockiImage.gameObject.activeSelf)
             movingPockiImage.transform.position = boxSlotImage[selectedItem].transform.position + Vector3.up * 50f;
+    }
+    public bool IsInventorySlot(int index)
+    {
+        return index < 29;
+    }
+    public ItemBase TakeItemFromSlot(int slotIndex)
+    {
+        ItemBase item = null;
+
+        // Cek apakah slot berasal dari INVENTORY (kiri)
+        if (IsInventorySlot(slotIndex))
+        {
+            int invIndex = slotIndex;
+
+            var slots = inventory.GetSlotsByCategories(selectedCategoryIndex);
+            if (invIndex >= slots.Count)
+                return null;
+
+            var slot = slots[invIndex];
+            if (slot == null || slot.Item == null)
+                return null;
+
+            item = slot.Item;
+
+            // hapus dari inventory
+            inventory.RemoveItem(item);
+        }
+        else
+        {
+            // Slot berasal dari MARKET BOX (kanan)
+            int boxIndex = slotIndex - inventSlots.Count; // jumlah slot inventory di kiri
+
+            item = storageBoxes.GetItem(SelectedBox, boxIndex);
+            if (item == null)
+                return null;
+
+            storageBoxes.RemoveItem(SelectedBox, boxIndex);
+        }
+
+        // ===== VISUALISASI ITEM YANG DIPINDAHKAN =====
+        if (slotIndex >= 0 && slotIndex < boxSlotImage.Count)
+        {
+            movingPockiImage.sprite = boxSlotImage[slotIndex].sprite;
+            movingPockiImage.transform.position = boxSlotImage[slotIndex].transform.position + Vector3.up * 50f;
+            boxSlotImage[slotIndex].color = new Color(1, 1, 1, 0);
+            movingPockiImage.gameObject.SetActive(true);
+        }
+
+        return item;
+    }
+    public void PutItemIntoSlot(ItemBase item, int slotIndex)
+    {
+        if (item == null)
+        {
+            Debug.LogWarning("[TransferUI] PutItemIntoSlot gagal: item == null");
+            return;
+        }
+
+        if (IsInventorySlot(slotIndex))
+        {
+            // Masukkan item ke INVENTORY (kiri)
+            inventory.AddItem(item);
+            Debug.Log($"[TransferUI] Item '{item.Name}' dimasukkan ke Inventory.");
+        }
+        else
+        {
+            // Masukkan item ke MARKET BOX (kanan)
+            int boxIndex = slotIndex - inventSlots.Count;
+
+            // Tambahkan item ke posisi spesifik di MarketBox
+            storageBoxes.AddItem(item, SelectedBox, boxIndex);
+            Debug.Log($"[TransferUI] Item '{item.Name}' dimasukkan ke Box {SelectedBox}, Slot {boxIndex}.");
+        }
+
+        // Setelah dipindahkan, sembunyikan gambar item yang sedang dibawa
+        movingPockiImage.gameObject.SetActive(false);
+
+        // Update tampilan
+        SetDataInInventorySlots();
+        SetDataInMarketSlots();
+    }
+    public void ResetIndex()
+    {
+        selectedItem = -1;
+        UpdateSelectionInUI();
+        UpdateBoxLabel();
+    }
+    public void HideMovingImage()
+    {
+        movingPockiImage.gameObject.SetActive(false);
+    }
+    public void UpdateBoxLabel()
+    {
+        // boxNameText.text = $"Box {SelectedBox + 1}";
     }
 }

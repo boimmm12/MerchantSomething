@@ -37,10 +37,60 @@ public class Inventory : MonoBehaviour
     }
     ItemCategory GetCatagoryFromItem(ItemBase item)
     {
-        if (item is RecoveryItem)
+        if (item is RecoveryItem || item is A)
             return ItemCategory.a;
         return ItemCategory.b;
     }
+    public void AddItem(ItemBase item, int count = 1)
+    {
+        Debug.Log($"[Inventory] AddItem dipanggil: {item.name}, count: {count}");
+        int category = (int)GetCatagoryFromItem(item);
+        var currentSlots = GetSlotsByCategories(category);
+
+        var itemSlot = currentSlots.FirstOrDefault(slot => slot.Item == item);
+        if (itemSlot != null)
+        {
+            itemSlot.Count += count;
+        }
+        else
+        {
+            currentSlots.Add(new ItemSlot()
+            {
+                Item = item,
+                Count = count
+            });
+        }
+
+        currentSlots.Sort((a, b) => string.Compare(a.Item.Name, b.Item.Name));
+
+        OnUpdated?.Invoke();
+    }
+
+    public int GetItemCount(ItemBase item)
+    {
+        int category = (int)GetCatagoryFromItem(item);
+        var currentSlots = GetSlotsByCategories(category);
+
+        var itemSlot = currentSlots.FirstOrDefault(slot => slot.Item == item);
+
+        if (itemSlot != null)
+            return itemSlot.Count;
+        else
+            return 0;
+    }
+    public void RemoveItem(ItemBase item, int countToRemove = 1)
+    {
+        int category = (int)GetCatagoryFromItem(item);
+        var currentSlots = GetSlotsByCategories(category);
+
+        var itemSlot = currentSlots.First(slot => slot.Item == item);
+        itemSlot.Count -= countToRemove;
+        if (itemSlot.Count == 0)
+            currentSlots.Remove(itemSlot);
+
+        OnUpdated?.Invoke();
+    }
+
 }
 [System.Serializable]
 public class ItemSlot

@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class MarketBox : MonoBehaviour
 {
-    const int numberOfBoxes = 12;
-    const int numberOfSlot = 2;
+    const int numberOfBoxes = 2;
+    const int numberOfSlot = 12;
     public int NumOfBoxes => numberOfBoxes;
     public int NumOfSlots => numberOfSlot;
     ItemBase[,] boxes = new ItemBase[numberOfBoxes, numberOfSlot];

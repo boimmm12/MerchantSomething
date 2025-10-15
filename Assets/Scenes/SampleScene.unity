@@ -4580,6 +4580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transferUI: {fileID: 382129737}
+  market: {fileID: 1135087982}
 --- !u!1 &169893325
 GameObject:
   m_ObjectHideFlags: 0
@@ -30038,11 +30039,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b99a1d8657789b4eabe8c9af753b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  availableSlots:
-  - item: {fileID: 11400000, guid: 2b0377ea14f4a944c9d6f05b7dd9447b, type: 2}
-    count: 2
-  - item: {fileID: 11400000, guid: 09a606bf9a99ee64481196fa36b53fdf, type: 2}
-    count: 1
   entrancePoint: {fileID: 677967918}
 --- !u!1 &1136135367
 GameObject:
