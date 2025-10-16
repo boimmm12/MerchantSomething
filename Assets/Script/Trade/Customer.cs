@@ -18,7 +18,7 @@ public class Customer : MonoBehaviour
 
     [SerializeField] Vector2 buyIntervalRange = new Vector2(8f, 15f);
     [SerializeField] bool autoFindMarketsInScene = true;
-    [SerializeField] List<Market> markets = new();
+    [SerializeField] Market market;
 
     [SerializeField] public GameObject exclamation;
     public bool IsWaitingToSell { get; private set; }
@@ -31,17 +31,9 @@ public class Customer : MonoBehaviour
     float buyTimer;
     float nextBuyTime;
 
-    Market targetMarket;
-
     void Awake()
     {
         ResetNextBuyTime();
-    }
-
-    void Start()
-    {
-        if (autoFindMarketsInScene)
-            markets.AddRange(FindObjectsOfType<Market>());
     }
 
     void ResetNextBuyTime()
@@ -55,20 +47,19 @@ public class Customer : MonoBehaviour
         if (market == null) return;
 
         if (activeRoutine != null) { StopCoroutine(activeRoutine); activeRoutine = null; }
-        targetMarket = market;
         state = CustomerState.Buying;
         idleTimer = 0f;
     }
 
     void Update()
     {
+        print($"{market.isOpen}");
         if (state == CustomerState.Idle)
         {
             if (IsWaitingToSell) return;
             buyTimer += Time.deltaTime;
-            if (buyTimer >= nextBuyTime && markets.Count > 0)
+            if (buyTimer >= nextBuyTime && market != null && market.isOpen)
             {
-                var market = markets[Random.Range(0, markets.Count)];
                 BuyFrom(market);
             }
         }
@@ -89,8 +80,8 @@ public class Customer : MonoBehaviour
                 break;
 
             case CustomerState.Buying:
-                if (activeRoutine == null && targetMarket != null)
-                    activeRoutine = StartCoroutine(BuyRoutine(targetMarket));
+                if (activeRoutine == null && market != null && market.isOpen)
+                    activeRoutine = StartCoroutine(BuyRoutine(market));
                 break;
         }
     }
@@ -158,7 +149,6 @@ public class Customer : MonoBehaviour
 
     void ResetAfterBuy(bool scheduleNext)
     {
-        targetMarket = null;
         if (scheduleNext) ResetNextBuyTime();
         idleTimer = 0f;
         state = CustomerState.Idle;

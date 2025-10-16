@@ -3,10 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-/// <summary>
-/// Market yang menggunakan data langsung dari MarketBox (storage pemain).
-/// Tidak menyimpan salinan item — semua operasi (reserve/commit) mengubah MarketBox.
-/// </summary>
 public class Market : MonoBehaviour, Interactable
 {
     [SerializeField] Transform entrancePoint;
@@ -20,6 +16,8 @@ public class Market : MonoBehaviour, Interactable
     int waitingBoxIndex = -1;
     int waitingSlotIndex = -1;
 
+    public bool isOpen = false;
+
     public event System.Action OnUpdated; // optional: UI bisa subscribe
 
     void Awake()
@@ -27,25 +25,6 @@ public class Market : MonoBehaviour, Interactable
         storageBoxes = MarketBox.GetPlayerStorageBox();
     }
 
-    void OnEnable()
-    {
-        // Jika MarketBox punya event OnUpdated, subscribe agar market tahu bila storage berubah.
-        // Uncomment jika MarketBox punya event public event Action OnUpdated;
-        // if (storageBoxes != null) storageBoxes.OnUpdated += OnStorageUpdated;
-    }
-
-    void OnDisable()
-    {
-        // if (storageBoxes != null) storageBoxes.OnUpdated -= OnStorageUpdated;
-    }
-
-    void OnStorageUpdated()
-    {
-        // Bila storage berubah, beri tahu listener (UI).
-        OnUpdated?.Invoke();
-    }
-
-    // Ambil daftar item yg ada sekarang (dibuat on-the-fly, bukan cached).
     public List<ItemSlot> GetAvailableItemsWithCounts()
     {
         var result = new List<ItemSlot>();
@@ -58,8 +37,6 @@ public class Market : MonoBehaviour, Interactable
                 var item = storageBoxes.GetItem(b, s);
                 if (item != null)
                 {
-                    // Jika kamu ingin menampilkan count dan MarketBox tidak menyimpan count,
-                    // gunakan count = 1. Jika MarketBox menyimpan count, ubah API dan ambil countnya.
                     result.Add(new ItemSlot { Item = item, Count = 1 });
                 }
             }
@@ -71,7 +48,6 @@ public class Market : MonoBehaviour, Interactable
     public Vector3 GetEntrancePosition()
         => entrancePoint ? entrancePoint.position : transform.position;
 
-    // Pilih random slot yang tersedia langsung dari storageBoxes, simpan mapping box+slot
     public bool TryReserveRandomAvailableItem(out ItemBase item)
     {
         item = null;
@@ -98,7 +74,6 @@ public class Market : MonoBehaviour, Interactable
         return true;
     }
 
-    // customer meminta item tertentu -> cari di storage, set waiting if found
     public bool TrySetWaiting(Customer cust, ItemBase item)
     {
         if (storageBoxes == null) return false;
@@ -137,7 +112,6 @@ public class Market : MonoBehaviour, Interactable
         }
     }
 
-    // Commit menghapus item langsung dari storageBoxes, lalu trigger update
     public void CommitSale(Customer cust)
     {
         if (waitingCustomer == null || waitingCustomer != cust)
@@ -152,22 +126,17 @@ public class Market : MonoBehaviour, Interactable
             return;
         }
 
-        // hapus dari storage
         storageBoxes.RemoveItem(waitingBoxIndex, waitingSlotIndex);
 
-        // reset waiting
         waitingCustomer = null;
         waitingItem = null;
         waitingBoxIndex = -1;
         waitingSlotIndex = -1;
         sellFinished = true;
 
-        // beri tahu UI/market listener
         OnUpdated?.Invoke();
-        // bila MarketBox implement OnUpdated, storageBoxes akan memicu OnStorageUpdated via subscription
     }
 
-    // CounterSale sama dengan Commit (kamu mungkin mau logika berbeda)
     public void CounterSale(Customer cust)
     {
         CommitSale(cust);
@@ -193,14 +162,14 @@ public class Market : MonoBehaviour, Interactable
 
     public IEnumerator Interact(Transform initiator)
     {
-        // sebelum interaksi, pastikan latest storage ref
         storageBoxes = MarketBox.GetPlayerStorageBox();
-
-        // kalau ada waiting customer/item, buka selling; else buka transfer UI
-        if (waitingCustomer != null && waitingItem != null)
+        if (isOpen)
         {
-            yield return GameController.Instance.StateMachine.PushAndWait(SellingState.i);
-            yield break;
+            if (waitingCustomer != null && waitingItem != null)
+            {
+                yield return GameController.Instance.StateMachine.PushAndWait(SellingState.i);
+                yield break;
+            }
         }
         else
         {

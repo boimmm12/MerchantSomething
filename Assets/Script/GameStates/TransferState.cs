@@ -23,6 +23,7 @@ public class TransferState : State<GameController>
         transferUI.SetDataInMarketSlots();
 
         transferUI.OnSelected += OnSlotSelected;
+        transferUI.OnProceedClicked += OnProceed;
         transferUI.OnBack += OnBack;
         market.OnUpdated += RefreshUI;
     }
@@ -37,7 +38,10 @@ public class TransferState : State<GameController>
         transferUI.gameObject.SetActive(false);
         transferUI.OnSelected -= OnSlotSelected;
         transferUI.OnBack -= OnBack;
+        transferUI.OnProceedClicked -= OnProceed;
         market.OnUpdated -= RefreshUI;
+
+        market.isOpen = true;
     }
 
     void OnBack()
@@ -91,6 +95,11 @@ public class TransferState : State<GameController>
         }
     }
 
+    void OnProceed()
+    {
+        gc.StateMachine.Pop();
+        market.isOpen = true;
+    }
     void RefreshUI()
     {
         transferUI.SetDataInMarketSlots();

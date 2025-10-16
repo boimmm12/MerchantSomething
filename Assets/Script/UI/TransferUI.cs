@@ -10,6 +10,7 @@ public class TransferUI : SelectionUI<ImageSlot>
 {
     [SerializeField] Button RBoxM;
     [SerializeField] Button LBoxM;
+    [SerializeField] Button ProceedB;
     // [SerializeField] Button bButton;
     [SerializeField] Image movingPockiImage;
     [SerializeField] List<ImageSlot> boxSlots;
@@ -17,6 +18,7 @@ public class TransferUI : SelectionUI<ImageSlot>
 
     bool isRbox = false;
     bool isLbox = false;
+    public event Action OnProceedClicked;
 
     List<BoxInventoryUI> inventSlots = new List<BoxInventoryUI>();
     List<BoxMarketUI> marketSlots = new List<BoxMarketUI>();
@@ -83,6 +85,12 @@ public class TransferUI : SelectionUI<ImageSlot>
         // bButton.onClick.AddListener(() => OnBackButton());
         RBoxM.onClick.AddListener(() => isRbox = true);
         LBoxM.onClick.AddListener(() => isLbox = true);
+        ProceedB.onClick.AddListener(() => OnProceedClicked?.Invoke());
+
+        if (Input.GetKeyDown(KeyCode.T))
+        {
+            OnProceedClicked?.Invoke();
+        }
     }
 
     public void SetDataInInventorySlots()

@@ -25,7 +25,7 @@ public class SellingState : State<GameController>
     public override void Enter(GameController owner)
     {
         gc = owner;
-
+        TimeManager.Instance?.AdvanceTime();
         input.SwitchCurrentActionMap("UI");
         shopUI.OnSelected += OnSelectedMenu;
         shopUI.OnBack += OnBack;
